@@ -23,9 +23,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles",
+                "node_modules/compass-mixins/lib"
+              ]
+            },
+            "scripts": [
+              "./node_modules/leapjs/leap-0.6.4.js",
+              "./node_modules/leapjs-plugins/main/leap-plugins-0.1.12.js",
+              "src/assets/leap.rigged-hand-0.1.7.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,7 +82,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -121,6 +131,11 @@
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
     }
   },
   "defaultProject": "hal5000"

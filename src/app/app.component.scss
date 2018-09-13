@@ -1,0 +1,35 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar{
+  z-index: 0;
+  height: 35px;
+  }
+  mat-sidenav{
+    width: 150px;
+    background: red;
+  }
+  mat-sidenav-container{
+    background: green;
+    z-index: -1;
+  }
+
+  .example-container {
+    position: absolute;
+    width: 100%;
+    top:35px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-radio-group {
+    display: block;
+    border: 1px solid #555;
+    margin: 20px;
+    padding: 10px;
+  }
+  
